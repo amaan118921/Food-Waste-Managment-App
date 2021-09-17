@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ngo.ViewRequestNgoFragment"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fl"
+        android:background="#eeeeee"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/request_details"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="140dp"
+                android:id="@+id/done"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_name"
+            android:text="@string/mahaveer_hotel"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"
+            android:textSize="16sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_place_24"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/address"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/address_add"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="80dp"
+                android:src="@drawable/ic_baseline_calendar_today_24"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="@string/date"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/date"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_description_24"
+                />
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="200dp"
+                android:hint="@string/address"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/desc"
+                android:textStyle="bold"
+                android:text="@string/_5_plates_of_samosas_dahi_vada_rabdi"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/approve_request"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:id="@+id/approve_req_btn"
+            app:backgroundTint="#eeeeee"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

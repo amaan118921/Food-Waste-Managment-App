@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".restaurants.ViewRequestFragment">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fl"
+        android:background="#eeeeee"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                />
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_baseline_done_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="270dp"
+                android:id="@+id/done"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_title_24"
+            android:layout_marginStart="15dp"
+            />
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:hint="@string/user_title"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:id="@+id/title_add"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_place_24"
+            android:layout_marginStart="15dp"
+            />
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:hint="@string/address"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:gravity="top"
+            android:id="@+id/address_add"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_description_24"
+            android:layout_marginStart="15dp"
+            />
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:hint="@string/description"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:gravity="top"
+            android:id="@+id/description_add"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="22dp"
+        android:layout_gravity="center"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:id="@+id/add_location_btn"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/add_location"
+            android:src="@drawable/ic_baseline_add_location_24"
+            android:layout_gravity="center"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/add_location"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

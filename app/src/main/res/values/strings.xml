@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Food Waste Managment App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Hotel/Restaurants \n
+        Registration</string>
+    <string name="t1">Verify your Phone Number</string>
+    <string name="enter_your_otp_code_here">Enter your OTP code here</string>
+    <string name="requests">Your Requests</string>
+    <string name="active_requests">Active Requests</string>
+    <string name="mahavir_hotel">Mahavir Hotel</string>
+    <string name="near_ramaji_film_city">Near Ramaji Film City</string>
+    <string name="_14_aug">14 Aug</string>
+    <string name="user_title">Title</string>
+    <string name="description">Description</string>
+    <string name="address">Location</string>
+    <string name="add_location">Add Location</string>
+    <string name="request_details">Request details</string>
+    <string name="mahaveer_hotel">Mahaveer Hotel</string>
+    <string name="date">Date</string>
+    <string name="_5_plates_of_samosas_dahi_vada_rabdi">5 plates of samosas, dahi vada, rabdi</string>
+    <string name="approve_request">Approve Request</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+</resources>

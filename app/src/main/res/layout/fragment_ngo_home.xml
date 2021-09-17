@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ngo.NgoHomeFragment">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fl"
+        android:background="#eeeeee"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/active_requests"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                />
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_baseline_bookmark_border_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="145dp"
+                android:id="@+id/bookmark"
+                />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:id="@+id/search"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                />
+            <!--        <ImageView-->
+            <!--            android:layout_width="24dp"-->
+            <!--            android:layout_height="24dp"-->
+            <!--            android:id="@+id/bookmark"-->
+            <!--            android:src="@drawable/ic_baseline_bookmark_border_24"-->
+            <!--            android:layout_gravity="center_vertical"-->
+            <!--            android:layout_marginStart="12dp"-->
+            <!--            />-->
+
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ngo_recycler_view"
+        android:layout_marginTop="65dp"
+        tools:listitem="@layout/ngo_item"
+        tools:itemCount="3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
