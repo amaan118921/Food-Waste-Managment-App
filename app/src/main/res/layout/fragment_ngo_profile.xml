@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ngo.NgoProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/spartaneemibold600"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/user"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:id="@+id/ll"
+        android:layout_marginStart="25dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/spartanmedium500"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:id="@+id/ngoName"
+            android:inputType="text"
+            android:fontFamily="@font/spartanreg"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/spartanmedium500"
+            android:textSize="14sp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:id="@+id/ngoPhone"
+            android:textSize="12sp"
+            android:inputType="phone"
+            android:fontFamily="@font/spartanreg"
+            android:layout_marginTop="4dp"
+            />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        app:backgroundTint="#0165FF"
+        android:id="@+id/save_btn"
+        android:layout_below="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/spartanmedium500"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

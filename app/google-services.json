@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "735438638046",
+    "firebase_url": "https://food-management-9060a-default-rtdb.firebaseio.com",
+    "project_id": "food-management-9060a",
+    "storage_bucket": "food-management-9060a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735438638046:android:a7c3bba5a63bfc63bf6b4f",
+        "android_client_info": {
+          "package_name": "com.example.foodwastemanagmentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735438638046-vpavi04g6o4rmon501ontqlsrrlp9nuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6pEizmRPPSZjxvOrOnj4ScvZwHtMK8I0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735438638046-vpavi04g6o4rmon501ontqlsrrlp9nuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
