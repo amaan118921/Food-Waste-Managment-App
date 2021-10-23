@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [ModelClasses::class], version = 1, exportSchema = false)
+@Database(entities = [ModelClasses::class, UserInfo::class, NgoInfo::class], version = 9, exportSchema = false)
 abstract class ApplicationDatabase: RoomDatabase() {
 
     abstract fun itemDao(): Dao
@@ -16,7 +16,8 @@ abstract class ApplicationDatabase: RoomDatabase() {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext, ApplicationDatabase::class.java,"item_database"
-                ).fallbackToDestructiveMigration().build()
+                ).allowMainThreadQueries()
+                    .fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 return instance
 

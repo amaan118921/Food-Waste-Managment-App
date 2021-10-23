@@ -3,54 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".restaurants.ViewRequestFragment">
 
 
-    <FrameLayout
+
+
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/fl"
-        android:background="#eeeeee"
+        android:layout_marginTop="4dp"
+        app:titleTextAppearance="@style/tool_bar"
+        android:id="@+id/toolbar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#1B2C4C"
+        />
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:id="@+id/fl"-->
+<!--        android:background="#eeeeee"-->
+<!--        >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:id="@+id/back"-->
+<!--                android:src="@drawable/ic_baseline_keyboard_backspace_24"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:layout_width="26dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:src="@drawable/ic_baseline_done_24"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="270dp"-->
+<!--                android:id="@+id/done"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+<!--    </FrameLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:id="@+id/back"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="15dp"
-                />
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/ic_baseline_done_24"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="270dp"
-                android:id="@+id/done"
-                />
-        </LinearLayout>
-    </FrameLayout>
+            android:orientation="vertical"
 
-    <LinearLayout
+            >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        app:strokeWidth="0.3dp"
+        app:strokeColor="@color/black"
+        >
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+            android:padding="4dp"
         >
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_title_24"
-            android:layout_marginStart="15dp"
             />
         <EditText
-            android:layout_width="325dp"
+            android:layout_width="275dp"
             android:layout_height="30dp"
             android:background="@null"
             android:layout_marginStart="10dp"
@@ -62,48 +96,102 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        app:strokeWidth="0.3dp"
+        app:strokeColor="@color/black"
+        >
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+            android:padding="4dp"
         >
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_place_24"
-            android:layout_marginStart="15dp"
             />
         <EditText
-            android:layout_width="325dp"
+            android:layout_width="275dp"
             android:layout_height="30dp"
             android:background="@null"
             android:layout_marginStart="10dp"
             android:hint="@string/address"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:gravity="top"
             android:id="@+id/address_add"
             />
 
     </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        app:strokeWidth="0.3dp"
+        app:strokeColor="@color/black"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_phone_android_24"
+                />
+            <EditText
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:layout_marginStart="10dp"
+                android:hint="Contact"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:id="@+id/contact"
+                />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        app:strokeWidth="0.3dp"
+        app:strokeColor="@color/black"
+        >
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+            android:padding="4dp"
         >
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_description_24"
-            android:layout_marginStart="15dp"
             />
         <EditText
-            android:layout_width="325dp"
+            android:layout_width="275dp"
             android:layout_height="100dp"
             android:background="@null"
             android:layout_marginStart="10dp"
@@ -115,37 +203,65 @@
             />
 
     </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                >
 
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="22dp"
-        android:layout_gravity="center"
-        android:background="#eeeeee"
-        android:gravity="center"
-        android:id="@+id/add_location_btn"
-        >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/add_location"
-            android:src="@drawable/ic_baseline_add_location_24"
-            android:layout_gravity="center"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status : "
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/spartanreg"/>
+                <EditText
+                    android:layout_width="275dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:layout_marginStart="13dp"
+                    android:hint="status of your request"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:id="@+id/status"
+                    />
 
-            />
-        <TextView
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="@string/add_location"
+            android:id="@+id/pB"
+            android:visibility="invisible"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
+            android:layout_marginTop="15dp"
             />
+    </FrameLayout>
 
-    </LinearLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="@string/update_loc"
+        android:textSize="13sp"
+        android:fontFamily="@font/spartanmedium500"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:id="@+id/add_location"
+        app:backgroundTint="#1B2C4C"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        />
 
 
 

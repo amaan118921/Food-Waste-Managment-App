@@ -3,39 +3,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".restaurants.AddRequestFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:titleTextAppearance="@style/tool_bar"
+        android:id="@+id/toolbar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#1B2C4C"
+        />
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:id="@+id/fl"-->
+<!--        android:background="#eeeeee"-->
+<!--        >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:id="@+id/back"-->
+<!--                android:src="@drawable/ic_baseline_keyboard_backspace_24"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:layout_width="26dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:src="@drawable/ic_baseline_done_24"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="285dp"-->
+<!--                android:id="@+id/done"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+<!--    </FrameLayout>-->
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/fl"
-        android:background="#eeeeee"
+        android:layout_height="wrap_content"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             >
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:id="@+id/back"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="15dp"
-                />
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/ic_baseline_done_24"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="285dp"
-                android:id="@+id/done"
-                />
-        </LinearLayout>
-    </FrameLayout>
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,8 +109,35 @@
             android:hint="@string/address"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:gravity="top"
             android:id="@+id/address_add"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_phone_android_24"
+            android:layout_marginStart="15dp"
+            />
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:hint="Contact"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:inputType="phone"
+            android:id="@+id/contact"
             />
 
     </LinearLayout>
@@ -116,45 +169,99 @@
 
     </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                >
 
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="22dp"
-        android:layout_gravity="center"
-        android:background="#eeeeee"
-        android:gravity="center"
-        android:id="@+id/add_location_btn"
-        >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/add_location"
-            android:src="@drawable/ic_baseline_add_location_24"
-            android:layout_gravity="center"
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Status : "
+                  android:layout_marginStart="15dp"
+                  android:textSize="14sp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/spartanreg"/>
+                <EditText
+                    android:layout_width="325dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:layout_marginStart="13dp"
+                    android:focusable="false"
+                    android:text="Available"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:inputType="phone"
+                    android:id="@+id/status"
+                    />
 
-            />
-        <TextView
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="@string/add_location"
+            android:id="@+id/pb"
+            android:visibility="invisible"
+            android:layout_marginTop="25dp"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
-        />
+            />
 
-    </LinearLayout>
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pb"
-        android:visibility="invisible"
-        android:layout_marginTop="25dp"
+    </FrameLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="#eeeeee"-->
+<!--        android:gravity="center"-->
+<!--        android:id="@+id/add_location_btn"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:id="@+id/add_location"-->
+<!--            android:src="@drawable/ic_baseline_add_location_24"-->
+<!--            android:layout_gravity="center"-->
+
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:text="@string/add_location"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18sp"-->
+<!--        />-->
+
+<!--    </LinearLayout>-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:text="@string/add_your_location"
+        android:textSize="13sp"
+        android:fontFamily="@font/spartanmedium500"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:id="@+id/add_location"
+        app:backgroundTint="#1B2C4C"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
         />
-
 
 
 

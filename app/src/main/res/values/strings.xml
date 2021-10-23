@@ -22,5 +22,28 @@
     <string name="approve_request">Approve Request</string>
     <string name="delete_question">Are you sure you want to delete?</string>
     <string name="no">No</string>
+    <string name="cancel">cancel</string>
+    <string name="message">"By Accepting the Permission for location, android will read the device current location"</string>
+    <string name="delete_msg">Delete Request?</string>
     <string name="yes">Yes</string>
+    <string name="profile">Profile</string>
+    <string name="pending_requests">Pending Requests</string>
+    <string name="ngo_portal">NGO Portal</string>
+    <string name="restaurants_have_joined_us">Restaurants have joined us</string>
+    <string name="ngos_have_joined_us">NGOs  have joined us</string>
+    <string name="add_your_location">Add Your Location</string>
+    <string name="update_loc">Update Location</string>
+    <string name="Ok">okay</string>
+    <string name="nv_open">Open</string>
+    <string name="nv_close">Close</string>
+    <string name="denied">"Android couldn't fetch the device location because the permission was denied"</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email_id">Email ID</string>
+    <string name="search">Search</string>
+    <string name="search_by_location">search by location..</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="you_have_no_bookmarked_requests">You have no bookmarked requests</string>
+
+
 </resources>

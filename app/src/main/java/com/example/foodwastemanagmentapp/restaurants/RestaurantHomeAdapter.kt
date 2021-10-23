@@ -26,7 +26,6 @@ class RestaurantHomeAdapter(private val fragment: Fragment, private val model: C
         val title = binding.name
         val add = binding.location
         val date = binding.date
-        val delete = binding.delete
     }
     companion object {
        val DiffCallback = object : DiffUtil.ItemCallback<ModelClasses>() {
@@ -55,10 +54,7 @@ class RestaurantHomeAdapter(private val fragment: Fragment, private val model: C
         holder.title.text = data.title
         holder.add.text = data.address
         holder.date.text = data.date
-        holder.delete.setOnClickListener {
-            RestaurantHomeFragment.binding.pb.visibility = View.VISIBLE
-            model.deleteInRoomAndFirebase(data, data.title)
-        }
+        RestaurantHomeFragment.binding.pb.visibility = View.INVISIBLE
 
         holder.itemView.setOnClickListener {
             model.setData(data)
