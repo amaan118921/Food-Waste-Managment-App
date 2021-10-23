@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="@string/search_by_location"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/bookmarks"
+        android:icon="@drawable/ic_baseline_bookmark_border_24"
+        android:title="@string/bookmark"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

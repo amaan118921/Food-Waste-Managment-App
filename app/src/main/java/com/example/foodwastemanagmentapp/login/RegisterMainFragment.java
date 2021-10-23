@@ -8,9 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
-import com.example.foodwastemanagmentapp.R;
 import com.example.foodwastemanagmentapp.databinding.FragmentMainRegisterBinding;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,18 +28,6 @@ public class RegisterMainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
 
-        binding.b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_registerMainFragment_to_restaurantHomeFragment);
-            }
-        });
-        binding.b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            Navigation.findNavController(v).navigate(R.id.action_registerMainFragment_to_ngoHomeFragment2);
-            }
-        });
 
     }
 }

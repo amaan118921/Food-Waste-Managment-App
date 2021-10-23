@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item android:id="@+id/navigation_icon"-->
+<!--        android:icon="@drawable/ic_baseline_format_align_justify_24"-->
+<!--        android:title="Navigate"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        />-->
+
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_by_location"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+<!--    <item-->
+<!--        android:id="@+id/bookmarks"-->
+<!--        android:icon="@drawable/ic_baseline_bookmark_border_24"-->
+<!--        android:title="@string/search_by_location"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView"-->
+<!--        app:showAsAction="ifRoom|collapseActionView" />-->
+</menu>

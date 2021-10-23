@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ngo.NgoRegisterFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify Your \n Phone Number"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_otp_code_here"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll"
+        android:layout_marginTop="185dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed1"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed2"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed3"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed4"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            />
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed5"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            />
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:id="@+id/ed6"
+            android:background="@drawable/edit_back"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginStart="4dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Didn't you receive any code?"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:id="@+id/t1"
+        android:layout_marginTop="265dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="RESEND NEW CODE"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="290dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:id="@+id/verify_button"
+        android:text="Verify"
+        android:textSize="18sp"
+        android:layout_marginTop="325dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/f1"
+        android:background="@color/white"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="NGO Registration"
+                android:layout_marginTop="18dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/avatar"
+                tools:src="@tools:sample/avatars"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="55dp"
+                android:gravity="center_vertical"
+                >
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp" />
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:id="@+id/phone_edt_text"
+                    android:inputType="phone"
+                    android:maxLength="10"
+
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="125dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="Send OTP"
+                android:textSize="16sp"
+                android:id="@+id/send_otp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        />
+
+</FrameLayout>

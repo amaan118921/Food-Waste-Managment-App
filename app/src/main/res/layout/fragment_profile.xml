@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0165FF" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:src="@drawable/ic_baseline_arrow_back_24_white_one"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/spartaneemibold600"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/draw"
+        android:orientation="vertical" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="125dp"
+        app:cardCornerRadius="13dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center_horizontal"
+            tools:src="@tools:sample/avatars"
+            android:layout_marginTop="25dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="150dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_baseline_person_outline_24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:inputType="text"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:id="@+id/name"
+                        android:background="@null"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/spartaneemibold600"
+                        android:hint="Name" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_baseline_smartphone_24" />
+
+                    <EditText
+                        android:id="@+id/phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/spartaneemibold600"
+                        android:hint="Mobile"
+                        android:background="@null"
+                        android:layout_marginStart="4dp"
+                        android:gravity="center_vertical"
+                        android:importantForAccessibility="no"
+                        android:inputType="phone"
+                        android:textSize="10sp"
+                        />
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="280dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                app:cardCornerRadius="12dp"-->
+<!--                app:cardElevation="4dp"-->
+<!--                >-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    >-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:src="@drawable/ic_baseline_email_24"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginStart="8dp"-->
+<!--                        />-->
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:inputType="textEmailAddress"-->
+<!--                        android:layout_marginStart="4dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:id="@+id/email_id"-->
+<!--                        android:hint="Email"-->
+<!--                        android:textSize="10sp"-->
+<!--                        android:background="@null"-->
+<!--                        android:fontFamily="@font/spartaneemibold600"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cancel"
+                    android:text="Cancel"
+                    android:fontFamily="@font/spartanmedium500"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:backgroundTint="#0165FF" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/save"
+                    android:text="Save"
+                    android:fontFamily="@font/spartanmedium500"
+                    app:backgroundTint="#0165FF"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_marginStart="50dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+</FrameLayout>

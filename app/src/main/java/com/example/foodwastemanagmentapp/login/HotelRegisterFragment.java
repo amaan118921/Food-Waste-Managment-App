@@ -11,9 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
-import com.example.foodwastemanagmentapp.R;
 import com.example.foodwastemanagmentapp.databinding.FragmentHotelRegisterBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -232,7 +230,7 @@ public class HotelRegisterFragment extends Fragment {
                         if(task.isSuccessful()) {
                             binding.pb.setVisibility(View.INVISIBLE);
                             Toast.makeText(requireContext(), "Successfully Registered", Toast.LENGTH_SHORT).show();
-                            Navigation.findNavController(requireView()).navigate(R.id.action_hotelRegisterFragment_to_restaurantHomeFragment);
+//                            Navigation.findNavController(requireView()).navigate(R.id.action_hotelRegisterFragment_to_restaurantHomeFragment);
                         }
                     }
                 });

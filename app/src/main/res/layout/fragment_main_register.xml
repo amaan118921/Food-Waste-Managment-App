@@ -1,43 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    tools:context=".login.RegisterMainFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterMainFragment"
     android:orientation="vertical"
+    >
 
->
-
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="350dp"
-        android:layout_height="75dp"
-        android:id="@+id/b1"
-        android:text="Hotel Register"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_title"
+        android:text="Food Waste Management \nSystem"
+        android:fontFamily="@font/spartanmedium500"
+        android:textSize="22sp"
+        android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="55dp"
-        android:background="#351b1b1b"
-        android:textStyle="bold"
-        android:textSize="15sp"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
+        android:textAllCaps="false"
         />
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="350dp"
-        android:layout_height="75dp"
-        android:id="@+id/b2"
-        android:text="NGO's Register"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
-        android:background="#351b1b1b"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/b1"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="#1B2C4C">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/spartanreg"
+                    android:text="Restaurants   o"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+<com.facebook.shimmer.ShimmerFrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:animationCache="true"
+    android:layout_below="@id/t1"
+    app:shimmer_repeat_mode="restart"
+    android:layout_marginStart="10dp"
+    app:shimmer_shape="radial"
+    android:id="@+id/shimmer_layout"
+    >
+
+    <TextView
+                    android:id="@+id/n1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/spartanbold700"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+</com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/spartanreg"
+                    android:text="@string/restaurants_have_joined_us"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/b2"
+            android:layout_width="300dp"
+            android:layout_height="135dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#1B2C4C">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/spartanreg"
+                    android:text="NGO   o"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:layout_below="@id/t2"
+                    app:shimmer_repeat_mode="restart"
+                    android:layout_marginStart="10dp"
+                    app:shimmer_shape="radial"
+                    android:id="@+id/shimLayout"
+                    >
+                <TextView
+                    android:id="@+id/n2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/spartanbold700"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/spartanreg"
+                    android:text="@string/ngos_have_joined_us"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
 
 
 
-
-
-
-
-</LinearLayout>
+</FrameLayout>

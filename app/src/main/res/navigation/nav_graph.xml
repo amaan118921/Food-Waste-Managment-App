@@ -6,37 +6,6 @@
     app:startDestination="@id/registerMainFragment">
 
     <fragment
-        android:id="@+id/hotelRegisterFragment"
-        android:name="com.example.foodwastemanagmentapp.login.HotelRegisterFragment"
-        android:label="HotelRegisterFragment"
-        tools:layout="@layout/fragment_hotel_register">
-        <action
-            android:id="@+id/action_hotelRegisterFragment_to_restaurantHomeFragment"
-            app:destination="@id/restaurantHomeFragment"
-            app:popUpTo="@id/restaurantHomeFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerMainFragment"
-        android:name="com.example.foodwastemanagmentapp.login.RegisterMainFragment"
-        android:label="RegisterMainFragment"
-        tools:layout="@layout/fragment_main_register">
-        <action
-            android:id="@+id/action_registerMainFragment_to_hotelRegisterFragment"
-            app:destination="@id/hotelRegisterFragment" />
-        <action
-            android:id="@+id/action_registerMainFragment_to_ngoHomeFragment"
-            app:destination="@id/ngoHomeFragment" />
-        <action
-            android:id="@+id/action_registerMainFragment_to_restaurantHomeFragment"
-            app:destination="@id/restaurantHomeFragment" />
-        <action
-            android:id="@+id/action_registerMainFragment_to_ngoHomeFragment2"
-            app:destination="@id/ngoHomeFragment"
-            app:popUpTo="@id/ngoHomeFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
         android:id="@+id/addRequestFragment"
         android:name="com.example.foodwastemanagmentapp.restaurants.AddRequestFragment"
         android:label="fragment_add_request"
@@ -53,19 +22,22 @@
         android:label="fragment_restaurant_home"
         tools:layout="@layout/fragment_restaurant_home" >
         <action
-            android:id="@+id/action_restaurantHomeFragment_to_registerMainFragment"
-            app:destination="@id/registerMainFragment" />
-        <action
             android:id="@+id/action_restaurantHomeFragment_to_addRequestFragment"
             app:destination="@id/addRequestFragment" />
         <action
             android:id="@+id/action_restaurantHomeFragment_to_viewRequestFragment"
             app:destination="@id/viewRequestFragment" />
         <action
-            android:id="@+id/action_restaurantHomeFragment_to_hotelRegisterFragment"
-            app:destination="@id/hotelRegisterFragment"
-            app:popUpTo="@id/hotelRegisterFragment"
+            android:id="@+id/action_restaurantHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_restaurantHomeFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/logInFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_restaurantHomeFragment_to_registerMainFragment"
+            app:destination="@id/registerMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewRequestFragment"
@@ -74,21 +46,30 @@
         tools:layout="@layout/fragment_view_request" >
         <action
             android:id="@+id/action_viewRequestFragment_to_restaurantHomeFragment"
-            app:destination="@id/restaurantHomeFragment" />
+            app:destination="@id/restaurantHomeFragment"
+            app:popUpTo="@id/restaurantHomeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/ngoHomeFragment"
         android:name="com.example.foodwastemanagmentapp.ngo.NgoHomeFragment"
         android:label="fragment_ngo_home"
-        tools:layout="@layout/fragment_ngo_home" >
+        tools:layout="@layout/fragment_ngo_home">
         <action
             android:id="@+id/action_ngoHomeFragment_to_viewRequestNgoFragment"
             app:destination="@id/viewRequestNgoFragment" />
         <action
-            android:id="@+id/action_ngoHomeFragment_to_hotelRegisterFragment"
-            app:destination="@id/hotelRegisterFragment"
-            app:popUpTo="@id/hotelRegisterFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_ngoHomeFragment_to_registerMainFragment"
+            app:destination="@id/registerMainFragment" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_bookMarksFragment"
+            app:destination="@id/bookMarksFragment" />
+        <action
+            android:id="@+id/action_ngoHomeFragment_to_ngoProfile"
+            app:destination="@id/ngoProfile" />
     </fragment>
     <fragment
         android:id="@+id/viewRequestNgoFragment"
@@ -100,5 +81,135 @@
             app:destination="@id/ngoHomeFragment"
             app:popUpTo="@id/ngoHomeFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewRequestNgoFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.foodwastemanagmentapp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment"
+            app:popUpTo="@id/restaurantHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.foodwastemanagmentapp.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment"
+            app:popUpTo="@id/restaurantHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_logInFragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment"
+            app:popUpTo="@id/ngoHomeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterDetailsFragment"
+        android:name="com.example.foodwastemanagmentapp.ngo.EnterDetailsFragment"
+        android:label="fragment_enter_details"
+        tools:layout="@layout/fragment_enter_details" >
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment"
+            app:popUpTo="@id/ngoHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_registerMainFragment"
+            app:destination="@id/registerMainFragment"
+            app:popUpTo="@id/registerMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterProfileFragment"
+        android:name="com.example.foodwastemanagmentapp.restaurants.EnterProfileFragment"
+        android:label="fragment_enter_profile"
+        tools:layout="@layout/fragment_enter_profile" >
+        <action
+            android:id="@+id/action_enterProfileFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment"
+            app:popUpTo="@id/restaurantHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_enterProfileFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkFragment"
+        android:name="com.example.foodwastemanagmentapp.CheckFragment"
+        android:label="fragment_check"
+        tools:layout="@layout/fragment_check" >
+        <action
+            android:id="@+id/action_checkFragment_to_enterProfileFragment"
+            app:destination="@id/enterProfileFragment"
+            app:popUpTo="@id/enterProfileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_checkFragment_to_enterDetailsFragment"
+            app:destination="@id/enterDetailsFragment"
+            app:popUpTo="@id/enterDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_checkFragment_to_restaurantHomeFragment"
+            app:destination="@id/restaurantHomeFragment" />
+        <action
+            android:id="@+id/action_checkFragment_to_ngoHomeFragment"
+            app:destination="@id/ngoHomeFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerMainFragment"
+        android:name="com.example.foodwastemanagmentapp.RegisterMainFragment"
+        android:label="fragment_main_register"
+        tools:layout="@layout/fragment_main_register" >
+        <action
+            android:id="@+id/action_registerMainFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.foodwastemanagmentapp.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="lat"
+            app:argType="string" />
+        <argument
+            android:name="lon"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarksFragment"
+        android:name="com.example.foodwastemanagmentapp.ngo.BookMarksFragment"
+        android:label="fragment_book_marks"
+        tools:layout="@layout/fragment_book_marks" >
+        <action
+            android:id="@+id/action_bookMarksFragment_to_viewRequestNgoFragment"
+            app:destination="@id/viewRequestNgoFragment" />
+        <action
+            android:id="@+id/action_bookMarksFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ngoProfile"
+        android:name="com.example.foodwastemanagmentapp.ngo.NgoProfile"
+        android:label="fragment_ngo_profile"
+        tools:layout="@layout/fragment_ngo_profile" />
 </navigation>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ngo.EnterDetailsFragment">
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="140dp"-->
+<!--        android:id="@+id/restImage"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        tools:src="@drawable/_1"-->
+
+<!--        />-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="NGO Portal"
+        android:fontFamily="@font/spartanbold700"
+        android:textColor="#1B2C4C"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:fontFamily="@font/spartaneemibold600"
+        android:textSize="18sp"
+        android:id="@+id/signUp_title"
+        android:layout_below="@id/title"
+        android:visibility="invisible"
+        android:layout_alignStart="@id/pass_card"
+        android:layout_marginTop="75dp"
+        android:textColor="#1B2C4C"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_person_24"
+            android:layout_below="@id/title"
+            android:layout_marginTop="25dp"
+            android:id="@id/profile"
+/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resName"
+        android:id="@+id/email_card"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/email_img"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_alternate_email_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/email"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:inputType="text"
+                android:background="@null"
+                android:textSize="14sp"
+                android:hint="@string/email_id"
+                android:fontFamily="@font/spartanmedium500"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_card"
+        android:id="@+id/pass_card"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/pass_img"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_lock_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/pass"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:fontFamily="@font/spartanmedium500"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:id="@+id/resName"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_person_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/resNameText"
+                android:inputType="text"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:hint="NGO Name"
+                android:fontFamily="@font/spartanmedium500"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass_card"
+        android:id="@+id/phone"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_phone_android_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/phone_edt_text"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:inputType="phone"
+                android:textSize="14sp"
+                android:hint="Phone"
+                android:fontFamily="@font/spartanmedium500"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="67dp"
+        android:id="@+id/signUpBtn"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="4dp"
+        android:text="Register"
+        app:backgroundTint="#0165FF"
+        android:fontFamily="@font/spartanbold700"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Registered?"
+            android:fontFamily="@font/spartanreg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:id="@+id/log_in"
+            android:layout_marginStart="12dp"
+            android:textColor="#0165FF"
+            android:fontFamily="@font/spartanmedium500"/>
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
